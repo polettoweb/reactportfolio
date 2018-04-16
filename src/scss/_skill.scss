@@ -1,0 +1,24 @@
+.skills__container {
+    @include centerItem($max-width);
+    @include flexBasic(space-around, row, wrap);
+    h3 {
+        width: 100%;
+    }
+}
+.skill {
+    box-sizing: border-box;
+    background-color: $grey;
+    width: 31%;
+    color: $ltext;
+    padding: 10px 20px 40px;
+
+    h4 {
+        font-weight: 700;
+        text-align: center;
+        padding: 10px 0 20px;
+        font-size: 25px;
+    }
+    p {
+        padding-top: 5px;
+    }
+}

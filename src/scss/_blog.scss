@@ -1,0 +1,53 @@
+.blog-cat {
+    &__container {
+        @include centerContainer;
+        @include flexBasic(space-evenly, row, wrap);
+        min-height: 80vh;
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: $text-color-light;
+            margin-bottom: 50px;
+            flex-basis: 100%;
+            text-shadow: 0 0 0 white;
+        }
+        .link-more {
+            display: none;
+        }
+    }
+    &__post {
+        width: 310px;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        a {
+            text-decoration: none;
+            &:link, &:visited {
+                color: $text;
+                text-decoration: none;
+            }
+        }
+    }
+    &__image {
+        width: 310px;
+        height: 310px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__excerpt {
+        p {
+            text-decoration: none;
+        }
+    }
+    &__link {
+        p {
+            display: block;
+            padding-top: 10px;
+            color: $purple;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

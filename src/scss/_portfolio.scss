@@ -1,0 +1,102 @@
+.portfolio {
+  background: $ltext;
+  min-height: 80vh;
+  padding-top:70px;
+  &__content {
+    @include centerContainer;
+    @include flexBasic(center, row, wrap);
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $text;
+    margin-bottom: 50px;
+    flex-basis: 100%;
+    text-shadow: 0 0 0 white;
+    padding-top: 50px;
+  }
+  &__box {
+    position: relative;
+    width: 48%;
+    max-width: 960px;
+    padding: 0 10px;
+    top: 0;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(.17, .67, .5, 1);
+    &:nth-child(even) {
+      .portfolio__img {
+        img {
+          border-radius: 100px 0 100px 0;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .portfolio__img {
+        img {
+          border-radius: 0 100px 0 100px;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 60px;
+    }
+
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      display: block;
+    box-shadow: 0 1px 5px 0 $text;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      box-shadow: none;
+      transform: scale(0.95);
+    }
+    }
+  }
+  &__links {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+
+    p {
+      padding-left: 10px;
+      color: $text;
+      font-weight: 500;
+      text-shadow: 0 0 0 white;
+      font-size: $font-size*1.2;
+    }
+  }
+  &__tags {
+    @include flexBasic(flex-start, row, wrap);
+    a {
+      display: inline-block;
+      min-width: 80px;
+      height: 20px;
+      padding: 2px 10px;
+      margin: 5px;
+      line-height: 20px;
+      text-align: center;
+      font-size: $font-size;
+      background: rgba($purple, 1);
+      color: $ltext;
+      box-shadow: 0 1px 5px 0 $text;
+      text-decoration: none;
+      &:hover {
+        background: rgba($azure, 1);
+      }
+
+    }
+  }
+  hr {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 960px;
+    height: 3px;
+    background: #efefef;
+    border: none;
+    box-shadow:0 1px 5px 0 $text ;
+  }
+}

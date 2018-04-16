@@ -1,0 +1,29 @@
+.blog {
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: $max-width;
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: $text-color;
+            margin-bottom: 50px;
+            flex-basis: 100%;
+            text-shadow: 0 0 0 white;
+        }
+        .link-more {
+            display: none;
+        }
+    }
+    &__post {
+        width: 100%;
+        max-width: $max-width;
+    }
+    &__image {
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+    }
+}

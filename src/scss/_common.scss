@@ -1,6 +1,7 @@
 html, body {
     font-family: $family-primary;
     background-color: #fafafa;
+    overflow-x: hidden;
 }
 %slide-in-right {
     right: 0;

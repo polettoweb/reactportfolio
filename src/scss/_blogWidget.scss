@@ -26,6 +26,10 @@
                 background-color: lighten($azure,20%);
             }
         }
+        h3 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
     }
     &__image {
         //width: 100%;

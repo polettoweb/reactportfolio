@@ -90,7 +90,7 @@ class Resume extends Component {
 
 <div className="home__me">
                         <div className="resume__buttons">
-                            <a className="button" href="http://www.marcopoletto.co.uk/static/img/marco-poletto-cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+                            <a className="button" href="https://marcopoletto.co.uk/marco-poletto-cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
                             <a className="button" href="mailto:marco@marcopoletto.co.uk">Contact Me</a>
                         </div>
                     </div>

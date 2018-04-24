@@ -66,39 +66,6 @@
             padding: 0 2%;
         }
     }
-    &__carousel {
-        padding: 50px 0 130px 0;
-        @include centerItem($max-width);
-        .slider-decorator-0, .slider-decorator-1 {
-            background-color: rgba(255,255,255,0.7);
-            border-radius: 50%;
-            a {
-                display: block;
-                //opacity : 0;
-                background-color: transparent !important;
-                width: 40px;
-                height: 40px;
-                background-image: url("img/chevron.svg");
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                
-            }
-        }
-        .slider-decorator-0 {
-            left: 10px !important;
-        }
-        .slider-decorator-1 {
-            right: 10px !important;
-            a {
-                transform: rotate(180deg);
-                
-            }
-        }
-        .slider-decorator-2 {
-            bottom: -50px !important;
-        }
-    }
 }
 p, h1, h2, h3 {
     strong {

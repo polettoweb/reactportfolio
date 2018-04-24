@@ -10,6 +10,9 @@
         height: 90%;
         background-color: $azure;
         left: 50%;
+        @media (max-width: 767px) {
+            left: 96%;
+        }
     }
     &__container {
         @include centerItem($max-width);
@@ -24,11 +27,21 @@
                 height: auto;
                 position: relative;
                 box-shadow: $box-shadow;
+                @media (max-width: 767px) {
+                        width: 88%;
+                        margin-bottom: 70px;
+                }
                 &:nth-child(odd) {
                     float: left;
+                    @media (max-width: 767px) {
+
+                    }
                 }
                 &:nth-child(even) {
                     float: right;
+                    @media (max-width: 767px) {
+                       float: left; 
+                    }
                 }
                 &.even {
                     &:before {
@@ -40,9 +53,18 @@
                         border-left: 16px solid transparent;
                         left: -16px;
                         top: 0;
+                        @media (max-width: 767px) {
+                            left: auto;
+                            right: -16px;
+                            border-right: 16px solid transparent;
+                        }
                     }
                     .ion-ios-circle-filled {
                         left: -41px;
+                        @media (max-width: 767px) {
+                            left: auto;
+                            right: -9.5vw;
+                        }
                     }
                 }
                 &.odd {
@@ -58,6 +80,9 @@
                     }
                     .ion-ios-circle-filled {
                         right: -44px;
+                        @media (max-width: 767px) {
+                            right: -9.5vw;
+                        }
                     }
                 }
                 &.second {

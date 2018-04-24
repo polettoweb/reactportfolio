@@ -19,10 +19,15 @@
     position: relative;
     width: 48%;
     max-width: 960px;
-    padding: 0 10px;
+    padding: 20px 10px;
     top: 0;
     z-index: 1;
     transition: all 0.5s cubic-bezier(.17, .67, .5, 1);
+    @media (max-width: 767px) {
+      width: 96%;
+      margin: 20px 0;
+      box-shadow: 1px 1px 50px 10px rgba($purple, .1);
+    }
     &:nth-child(even) {
       .portfolio__img {
         img {

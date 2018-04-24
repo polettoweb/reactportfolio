@@ -10,7 +10,7 @@ class Blog extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://localhost:8888/wordpress/wp-json/wp/v2/posts')
+        fetch('https://marcopoletto.co.uk/blog/wp-json/wp/v2/posts')
             .then(data => {
                 return data.json();
             })
@@ -37,7 +37,7 @@ class Blog extends Component {
                                 <img src={post.better_featured_image ? post.better_featured_image.source_url : ''} 
                                     alt={post.better_featured_image ? post.better_featured_image.alt_text : ''} />
                             </div>
-                            <h3 >{post.title.rendered}</h3>
+                            <h3 className="blog-cat__title">{post.title.rendered}</h3>
                             <div className="blog-cat__excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered}} />
                             <div className="blog-cat__link"><p>Read more</p></div>
                         </Link>

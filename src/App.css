@@ -296,7 +296,7 @@ nav {
     letter-spacing: 1.5px; }
 .home__social {
   width: 100%;
-  max-width: 250px;
+  max-width: 270px;
   margin-left: auto;
   margin-right: auto;
   padding: 120px 0 40px;
@@ -710,6 +710,17 @@ p strong, h1 strong, h2 strong, h3 strong {
     width: 100%;
     margin-top: 10px;
     padding: 10px 0; }
+    .portfolio__links-git {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      background-color: #4db2b3;
+      border-radius: 5px; }
+      .portfolio__links-git img {
+        width: 100px; }
     .portfolio__links p {
       padding-left: 10px;
       color: #424242;
@@ -756,8 +767,6 @@ p strong, h1 strong, h2 strong, h3 strong {
     flex-basis: 100%;
     text-shadow: 0 0 0 white;
     padding-top: 120px; }
-  .workshop p {
-    text-align: center; }
 
 .resume__container {
   width: 100%;

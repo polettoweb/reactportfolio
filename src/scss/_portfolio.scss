@@ -71,6 +71,20 @@
     width: 100%;
     margin-top: 10px;
     padding: 10px 0;
+    
+    &-git {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      background-color: lighten($azure, 0);
+      border-radius: 5px;
+      img {
+        width: 100px;
+      }
+    }
 
     p {
       padding-left: 10px;

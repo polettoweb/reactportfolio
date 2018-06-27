@@ -7,7 +7,9 @@ class PortfolioItem extends Component {
         this.text = this.props.text;
         this.link = this.props.link;
         this.linkTitle = this.props.linkTitle;
+        this.linkGit = this.props.linkGit;
         this.tags = this.props.tags;
+        this.linkGitTitle = this.props.linkGitTitle;
     }
 
     render() {
@@ -21,6 +23,7 @@ class PortfolioItem extends Component {
                 </div>
                 <div className="portfolio__links">
                     <p className="portfolio__links-text">{this.text}</p>
+                    {this.linkGit ? <a href={this.linkGit} title={this.linkGitTitle} target="_blank" className="portfolio__links-git" rel="noopener noreferrer"><img src="img/GitHub.png" /></a> : ''}
                 </div>
                 <div className="portfolio__tags">
                     {tags.map(tag => {

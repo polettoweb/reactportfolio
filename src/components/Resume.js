@@ -5,48 +5,60 @@ import Skill from "./partials/Skill";
 
 class Resume extends Component {
   render() {
-    const shootText =
-      "Maintenance and development of the frontend part of various websites with or without CMS. Develop, refinement and management of the automated development environment (Gulp, GIT, Webpack, browsersynch, etc), of RESTful APIs between Wordpress and other services such as OpenWeather and social networks. Specialisation in Frontend Development and UX experience.";
-    const galtoneText =
-      "Maintenance and development of e-commerce websites. My role covers all aspect of development new websites based in Magento and Wordpress. From the creation of the development environment to the release in production. I am specialized in Front end development but I work on the backend too. We use code versioning and I am coordinating in-house and external developers to merge the code into the final product.";
-    const freelanceText =
-      "The beginning of my developer career. A freelance role that allows me to develop projects from the wireframe to the production code. Managing clients and their expectations. Work independently and with tight deadlines.";
-    const missText =
-      "A new exciting adventure has started. I am part of a big project for migrating a strong and solid website into a new era. As part of the team I am maintening the two company websites (Missguided and Mennace), improving performance, updating/refactoring the code and mentoring more junior developers with a pair programme system.";
-    return (
+      const expDetails = [
+    {
+      "text" : "I am part of a big project for migrating a strong and solid website into a new era. As part of the team I am maintening the two company websites (Missguided and Mennace), improving performance, updating/refactoring the code and mentoring more junior developers with a pair programme system.",
+      "number" : "odd",
+      "title" : "UI Engineer",
+      "location" : "MAG-O - Manchester",
+      "date" : "July 2018 - Now"
+    },
+    {
+      "text" : "I was part of a big project for migrating a strong and solid website into a new era. As part of the team I was maintening the two company websites (Missguided and Mennace), improving performance, updating/refactoring the code and mentoring more junior developers with a pair programmimg system.",
+      "number" : "even",
+      "title" : "Frontend Software Engineer",
+      "location" : "Missguided LTD - Manchester",
+      "date" : "December 2017 - June 2018"
+    },
+    {
+      "text" : "Maintenance and development of the frontend part of various websites with or without CMS. Develop, refinement and management of the automated development environment (Gulp, GIT, Webpack, browsersynch, etc), of RESTful APIs between Wordpress and other services such as OpenWeather and social networks. Specialisation in Frontend Development and UX experience.",
+      "number" : "odd",
+      "title": "Frontend Web Developer",
+      "location": "Shoot The Moon LTD - Manchester",
+      "date" : "April 2017 - December 2017"
+    },
+    {
+      "text" : "Maintenance and development of e-commerce websites. My role covers all aspect of development new websites based in Magento and Wordpress. From the creation of the development environment to the release in production. I am specialized in Front end development but I work on the backend too. We use code versioning and I am coordinating in-house and external developers to merge the code into the final product.",
+      "number" : "even",
+      "title" : "Software Developer",
+      "location" : "Galtone LTD - London",
+      "date" : "June 2015 - March 2017"
+    },
+    {
+      "text" : "The beginning of my developer career. A freelance role that allows me to develop projects from the wireframe to the production code. Managing clients and their expectations. Work independently and with tight deadlines.",
+      "number" : "odd",
+      "title" : "Freelance Web Developer",
+      "location" : "Freelance - Italy/London",
+      "date" : "January 2014 - May 2015"
+    }
+  ];
+
+  
+      return (
       <section className="resume__container">
-        {/* <h1 className="title">Marco Poletto - Frontend Developer</h1> */}
         <section className="experience__container">
           <h3>Experience</h3>
           <ul className="experience">
-            <ExpCard
-              number="odd first"
-              title="Frontend Software Engineer"
-              location="Missguided LTD - Manchester"
-              date="December 2017 - Now"
-              text={missText}
-            />
-            <ExpCard
-              number="even second"
-              title="Frontend Web Developer"
-              location="Shoot The Moon LTD - Manchester"
-              date="April 2017 - December 2017"
-              text={shootText}
-            />
-            <ExpCard
-              number="odd third"
-              title="Software Developer"
-              location="Galtone LTD - Liverpool"
-              date="June 2015 - March 2017"
-              text={galtoneText}
-            />
-            <ExpCard
-              number="even fourth"
-              title="Freelance Web Developer"
-              location="Freelance - Italy/Manchester"
-              date="January 2014 - May 2015"
-              text={freelanceText}
-            />
+            {expDetails.map(item => {
+              return <ExpCard 
+                key={item.date}
+                number={item.number}
+                title={item.title}
+                date={item.date}
+                text={item.text}
+              />
+            })}
+            
           </ul>
         </section>
         <section className="skills__container">
@@ -71,9 +83,9 @@ class Resume extends Component {
                 trailWidth="2"
                 trailColor="#f4f5f7"
               />
-              <p>Reactive Development - 80%</p>
+              <p>Reactive Development - 90%</p>
               <Line
-                percent="80"
+                percent="90"
                 strokeWidth="2"
                 strokeColor="#4db2b3"
                 prefixCls="skill"
@@ -138,9 +150,9 @@ class Resume extends Component {
                 trailWidth="2"
                 trailColor="#f4f5f7"
               />
-              <p>Reactive Frameworks (React, VueJS) - 80%</p>
+              <p>Reactive Frameworks (React, VueJS) - 90%</p>
               <Line
-                percent="70"
+                percent="90"
                 strokeWidth="2"
                 strokeColor="#4db2b3"
                 prefixCls="skill"
@@ -232,9 +244,9 @@ class Resume extends Component {
                 trailWidth="2"
                 trailColor="#f4f5f7"
               />
-              <p>Teamwork - 85%</p>
+              <p>Teamwork - 90%</p>
               <Line
-                percent="85"
+                percent="90"
                 strokeWidth="2"
                 strokeColor="#4db2b3"
                 prefixCls="skill"

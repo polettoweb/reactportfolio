@@ -11,6 +11,9 @@ class PortfolioItem extends Component {
         this.tags = this.props.tags;
         this.linkGitTitle = this.props.linkGitTitle;
     }
+    preventDefault(e) {
+        e.preventDefault();
+    }
 
     render() {
         let tags = this.tags.split(",");
@@ -23,11 +26,11 @@ class PortfolioItem extends Component {
                 </div>
                 <div className="portfolio__links">
                     <p className="portfolio__links-text">{this.text}</p>
-                    {this.linkGit ? <a href={this.linkGit} title={this.linkGitTitle} target="_blank" className="portfolio__links-git" rel="noopener noreferrer"><img src="img/GitHub.png" /></a> : ''}
+                    {this.linkGit ? <a href={this.linkGit} title={this.linkGitTitle} target="_blank" className="portfolio__links-git" rel="noopener noreferrer"><img src="img/GitHub.png" alt="GitHub Logo"/></a> : ''}
                 </div>
                 <div className="portfolio__tags">
                     {tags.map(tag => {
-                        return <a target="_self" key={tag} href="">{tag}</a>
+                        return <a target="_self" key={tag} href={this.preventDefault}>{tag}</a>
                     })
                     }
                 </div>

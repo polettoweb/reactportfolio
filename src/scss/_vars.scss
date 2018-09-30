@@ -9,11 +9,10 @@ $text: #424242;
 $max-width: 1200px;
 $text-color: #424753;
 $text-color-light: #dedede;
+$title-color: #6f788c;
 $font-size: 0.9rem;
-$family-primary: 'Roboto',
-sans-serif;
-$family-secondary: 'Raleway',
-sans-serif;
+$family-primary: 'Titillium Web', sans-serif, sans-serif;
+$family-secondary: 'Marck Script', cursive;
 $box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 $linear-gradient: linear-gradient(-40deg, $azure, $purple);
 $base-transition: all cubic-bezier(.17, .67, .5, 1) 0.3s;
@@ -27,6 +26,9 @@ $peakopacity:0.7;
 
 /* MEDIA QUERY */
 $mobile: "(max-width: 768px)";
+$mbp: 768px;
+$dbp: 769px;
+
 /* mixins */
 
 @mixin centerContainer() {

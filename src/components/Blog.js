@@ -10,7 +10,7 @@ class Blog extends Component {
         }
     }
     componentDidMount() {
-        fetch('https://marcopoletto.co.uk/blog/wp-json/wp/v2/posts')
+        fetch('https://marcopolettouk.firebaseio.com/articles/.json')
             .then(data => {
                 return data.json();
             })
@@ -27,22 +27,28 @@ class Blog extends Component {
     }
     render() {
         return (
-            <div className="blog-cat__container">
+            <div className="blog-cat__home">
                 <h1>Blog</h1>
+                <div className="blog-cat__container">
                 {this.state.posts.map(post => (
                     
-                    <div className="blog-cat__post" key={post.id}>
-                        <Link to={`/Blog/${post.slug}/${post.id}`} slug={post.id}>
+                    <article className="blog-cat__post" key={post.id}>
+                        {console.log(post)}
+                        
+                        <Link to={`/Blog/${post.slug}/${post.id}`} slug={post.slug}>
                             <div className="blog-cat__image">
-                                <img src={post.better_featured_image ? post.better_featured_image.source_url : ''} 
-                                    alt={post.better_featured_image ? post.better_featured_image.alt_text : ''} />
+                                <img src={post.thumbnail} alt={this.state.title} className="blog-cat__image"/>
                             </div>
-                            <h3 className="blog-cat__title">{post.title.rendered}</h3>
-                            <div className="blog-cat__excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered}} />
-                            <div className="blog-cat__link"><p>Read more</p></div>
+                            <div className="blog-cat__title">
+                                <h2>{post.title}</h2>
+                            </div>
+                            <div className="blog-cat__text">
+                                <p>{post.previewText}</p>
+                            </div>
                         </Link>
-                    </div>
+                    </article>
                 ))}
+                </div>
             </div>
         );
     }

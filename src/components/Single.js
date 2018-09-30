@@ -5,38 +5,42 @@ class Single extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            posts: [],
-            image: [],
-            title: undefined,
-            excerpt: undefined
+            posts: '',
+            thumbnail: '',
+            title: '',
+            content: ''
         }
     }
     componentDidMount() {
         console.log(this.props.match.params);
-        fetch(`http://localhost:8888/wordpress/wp-json/wp/v2/posts/${this.props.match.params.id}`)
+        fetch('https://marcopolettouk.firebaseio.com/articles/.json')
             .then(data => {
                 return data.json();
             })
             .then(res => {
+                console.log(res);
+                res = res.filter(el => {return el.slug === this.props.match.params.slug})[0]
+                console.log(res)
                 const posts = res;
-                const image = posts.better_featured_image;
-                const title = posts.title.rendered;
-                const excerpt = posts.excerpt.rendered;
-                this.setState({ posts, image, title, excerpt });
+                const thumbnail = posts.thumbnail;
+                const title = posts.title;
+                const content = posts.content;
+                this.setState({ posts, thumbnail, title, content });
             })
     }
     render() {
         return (
             <div className="blog__container">
-                <h1>{this.state.title}</h1>
-                <div className="blog__post" key={this.state.image ? this.state.image.id : ''}>
+                <section> 
+                    <h1>{this.state.title}</h1>
                     <div className="blog__image">
-                        <img src={this.state.image ? this.state.image.source_url: ''} 
-                             alt={this.state.image ? this.state.image.alt_text : ''} />
+                        <img src={this.state.thumbnail}  alt={this.state.title} />
                     </div>
-                    <div className="blog__excerpt" dangerouslySetInnerHTML={{ __html: this.state.excerpt}} />
-                    <div className="blog__link"><Link to="/Blog">Go Back</Link></div>
-                </div>
+                    <div className="post" >
+                        <p>{this.state.content}</p>
+                    </div>
+                    <div className="blog__back-container"><Link to="/Blog" className="blog__back">Go Back</Link></div>
+                </section>
             </div>
         );
     }

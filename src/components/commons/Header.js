@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import MediaQuery from 'react-responsive'; 
 import logo from '../../img/logo.png';
 import toggle from '../../img/toggle.svg';
 
@@ -17,10 +16,10 @@ class Header extends Component {
         <header>
             <div className="header--top">
                 <div className="nav__container">
-                    <MediaQuery maxWidth={767}>
+                    <div className="header__mobile">
                         <a className="toggleLink" onClick={this.handleMenu}><img src={toggle} className="toggle" alt="Toggle menu" /></a>
                         <p className="mobileName" >Marco Poletto</p>
-                    </MediaQuery>
+                    </div>
                     <nav>
                         <ul>
                             <li onClick={this.handleMenu}><Link to="/" title="Home">Home</Link></li>
@@ -32,11 +31,8 @@ class Header extends Component {
                     </nav>
                 </div>
                 
-                {/* <MediaQuery query="(max-device-width: 767px)"> */}
-
-                {/* </MediaQuery> */}
                 <h2 className="header__name">Marco Poletto</h2>
-                <h3>Frontend Web Developer</h3>
+                {/* <h3>Frontend Web Developer</h3> */}
             </div>
             <div className="header__logo">
                 <img src={logo} className="logo" alt="logo" />

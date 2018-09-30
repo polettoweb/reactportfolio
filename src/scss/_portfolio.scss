@@ -1,20 +1,12 @@
 .portfolio {
   background: $ltext;
   min-height: 80vh;
-  padding-top: 70px;
+  padding-top: 100px;
   &__content {
     @include centerContainer;
     @include flexBasic(center, row, wrap);
   }
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: $text;
-    margin-bottom: 50px;
-    flex-basis: 100%;
-    text-shadow: 0 0 0 white;
-    padding-top: 50px;
-  }
+
   &__box {
     position: relative;
     width: 47%;
@@ -96,6 +88,7 @@
   }
   &__tags {
     @include flexBasic(flex-start, row, wrap);
+
     a {
       display: inline-block;
       min-width: 80px;
@@ -105,6 +98,7 @@
       line-height: 20px;
       text-align: center;
       font-size: $font-size;
+      font-weight: bold;
       background: rgba($purple, 1);
       color: $ltext;
       box-shadow: 0 1px 5px 0 $text;

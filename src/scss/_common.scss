@@ -51,7 +51,17 @@ html, body {
         background-color: darken($purple, 20%);
     }
 }
+h1 {
+    font-family: $family-secondary;
+    text-align: center;
+    font-size: 75px;
+    color: $title-color;
+    width: 100%;
+    text-shadow: 0 0 0 white;
+    margin-bottom: 30px;
+}
 h3 {
+    font-family: $family-secondary;
     text-align: center;
     margin: 10px 0 30px;
     font-size: 37px;

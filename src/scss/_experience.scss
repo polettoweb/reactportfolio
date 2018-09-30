@@ -30,21 +30,28 @@
         height: auto;
         position: relative;
         box-shadow: $box-shadow;
+      
         @media (max-width: 767px) {
           width: 88%;
           margin-bottom: 70px;
         }
+
         &:nth-child(odd) {
           float: left;
           @media (max-width: 767px) {
           }
         }
+
         &:nth-child(even) {
           float: right;
           @media (max-width: 767px) {
             float: left;
           }
         }
+        &:not(:nth-child(1)) {
+          margin-top: -60px;
+        }
+
         &.even {
           &:before {
             position: absolute;
@@ -61,6 +68,7 @@
               border-right: 16px solid transparent;
             }
           }
+
           .ion-ios-circle-filled {
             left: -41px;
             @media (max-width: 767px) {
@@ -69,6 +77,7 @@
             }
           }
         }
+
         &.odd {
           &:before {
             position: absolute;
@@ -80,6 +89,7 @@
             right: -16px;
             top: 0;
           }
+
           .ion-ios-circle-filled {
             right: -44px;
             @media (max-width: 767px) {
@@ -87,21 +97,14 @@
             }
           }
         }
-        &.second {
-          margin-top: -60px;
-        }
-        &.third {
-          margin-top: -50px;
-        }
-        &.fourth {
-          margin-top: -60px;
-        }
+
         &__title {
           width: calc(100% - 40px);
           height: 30px;
           padding: 20px;
           background-color: $text;
           color: $ltext;
+
           p {
             color: $ltext;
             font-weight: 700;
@@ -109,15 +112,19 @@
             font-size: 19px;
           }
         }
+
         &__text {
           width: calc(100% - 40px);
           height: auto;
           padding: 20px;
+
           p {
             padding: 0 20px;
+
             &.expcard__location {
               padding-bottom: 10px;
             }
+
             &.expcard__date {
               padding-bottom: 10px;
             }

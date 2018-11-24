@@ -152,9 +152,11 @@ h3 {
   padding-bottom: 50px; }
 
 header {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
   height: 40vh;
-  background-color: #3d8f90;
-  background-image: url("./img/hero.jpg");
+  background-color: rgba(61, 143, 144, 0.1);
   background-position: center;
   background-size: cover; }
   header .logo {
@@ -166,7 +168,6 @@ header {
         height: 20vh; } }
 
 .nav__container {
-  background-color: rgba(54, 125, 126, 0.5);
   top: 0;
   left: 0;
   width: 100%;
@@ -241,51 +242,47 @@ nav {
           nav ul li a {
             font-size: 20px; } }
 
-.header--top {
-  text-align: center;
-  color: #efefef;
-  z-index: 100; }
-  @media (max-width: 767px) {
-    .header--top {
-      padding-top: 50px; } }
-  .header--top h2 {
-    font-family: "Marck Script", cursive;
-    font-weight: 700;
-    padding-top: 30px;
-    font-size: 75px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
-    margin-bottom: 10px; }
+.header {
+  display: flex;
+  flex-direction: row-reverse; }
+  .header--top {
+    flex-grow: 9;
+    text-align: center;
+    color: #efefef;
+    z-index: 100; }
     @media (max-width: 767px) {
-      .header--top h2 {
-        display: none; } }
-  .header--top h3 {
-    font-weight: 700;
-    font-size: 18px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
-    color: #fff; }
-    @media (max-width: 767px) {
-      .header--top h3 {
-        padding-top: 20px; } }
-.header__logo {
-  background-color: #a66fbf;
-  border-radius: 50%;
-  border: 4px solid #efefef;
-  position: absolute;
-  z-index: 99;
-  top: 40vh;
-  left: 50%;
-  width: 15vh;
-  height: 15vh;
-  transform: translate3d(-50%, -50%, 0);
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2); }
-  @media (max-width: 767px) {
-    .header__logo {
-      top: 35vh;
-      width: 20vh;
-      height: 20vh; } }
-@media (min-width: 769px) {
-  .header__mobile {
-    display: none; } }
+      .header--top {
+        padding-top: 50px; } }
+    .header--top h2 {
+      font-family: "Marck Script", cursive;
+      font-weight: 700;
+      padding-top: 30px;
+      font-size: 75px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+      margin-bottom: 10px; }
+      @media (max-width: 767px) {
+        .header--top h2 {
+          display: none; } }
+    .header--top h3 {
+      font-weight: 700;
+      font-size: 18px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+      color: #fff; }
+      @media (max-width: 767px) {
+        .header--top h3 {
+          padding-top: 20px; } }
+  .header__logo {
+    flex-grow: 1;
+    border: 4px solid #efefef;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2); }
+    .header__logo img {
+      width: 100%;
+      height: 100%; }
+  @media (min-width: 769px) {
+    .header__mobile {
+      display: none; } }
 
 .home__container {
   width: 100%;

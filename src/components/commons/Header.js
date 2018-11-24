@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../img/logo.png';
+import logo from '../../img/logo.svg';
 import toggle from '../../img/toggle.svg';
 
 class Header extends Component {
@@ -31,13 +31,14 @@ class Header extends Component {
                     </nav>
                 </div>
                 
-                <h2 className="header__name">Marco Poletto</h2>
                 {/* <h3>Frontend Web Developer</h3> */}
             </div>
             <div className="header__logo">
                 <img src={logo} className="logo" alt="logo" />
             </div>
         </header>
+                // <h2 className="header__name">Marco Poletto</h2>
+
       );
     }
   }
